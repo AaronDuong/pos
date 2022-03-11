@@ -1,0 +1,170 @@
+:root {
+	--main-bg-color: rgb(79, 79, 235);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 67.5%;
+}
+
+body {
+	padding: 20px;
+	height: 740px;
+	width: 1004px;
+	font-size: 2rem;
+	background: var(--main-bg-color);
+	border: 2px solid white;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* layout */
+
+.top {
+	flex-basis: 100%;
+}
+
+.left-side,
+.right-side {
+	flex-basis: 50%;
+	height: 620px;
+}
+
+.displayPanel {
+	width: 100%;
+	height: 45%;
+	border: 1px gray solid;
+	padding: 1rem;
+	background: rgb(211, 201, 201);
+}
+
+.displayLabel {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	text-align: center;
+	border: 1px solid gray;
+	font-weight: bold;
+}
+
+.admin-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	height: 100px;
+	background: var(--main-bg-color);
+}
+
+.admin.left {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column: 1 / 3;
+	gap: 0.5rem;
+	padding: 0.5rem;
+}
+
+.admin.right {
+	grid-column: 4 /4;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.5rem;
+	padding: 0.5rem;
+}
+
+.serviceCategory-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	height: 100px;
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--main-bg-color);
+}
+
+.service-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	height: 80%;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	background: var(--main-bg-color);
+}
+
+.makeChanges-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	height: 135px;
+	gap: 1rem;
+	padding: 0.5rem;
+	background: var(--main-bg-color);
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px gray solid;
+	background: var(--main-bg-color);
+}
+
+.totalPriceDisplay {
+	height: 120px;
+	border: 1px solid gray;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.subtotal-labels,
+.subtotal-values {
+	display: grid;
+	text-align: right;
+	padding-top: 1rem;
+}
+
+.subtotal-values {
+	padding-right: 7rem;
+}
+
+.belowTotal {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	height: 10%;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+/* button styling */
+
+.btn {
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 1.5rem;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
