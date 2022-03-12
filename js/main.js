@@ -65,6 +65,8 @@ const serviceButtons = Array.from(document.querySelectorAll(".btn.serviceBtn"));
 const priceOutput = document.querySelector(".price-column");
 const servicesOutput = document.querySelector(".service-column");
 const subTotalOutput = document.querySelector("#subtotal");
+const hstOutput = document.querySelector("#hst");
+const totalOutput = document.querySelector("#total");
 
 let dollarUSLocale = Intl.NumberFormat("en-US");
 let subTotal = 0.0;
@@ -79,19 +81,24 @@ serviceButtons.forEach((button) => {
 });
 
 function addItem() {
+	// create two new elements to show the services and price
 	let newPrice = document.createElement("p");
 	let newService = document.createElement("p");
-	newPrice.innerText = dollarUSLocale.format(this.value);
+	// update the displayout with the service and price values
+	newPrice.innerText = parseFloat(this.value).toFixed(2);
 	newService.innerText = this.innerText;
+	//append it to the parent div to output display
 	priceOutput.appendChild(newPrice);
 	servicesOutput.appendChild(newService);
+	// tally up the total so far
 	subTotal += parseFloat(this.value);
-	subTotalOutput.innerText = subTotal;
-}
-
-function formatNumber(num) {
-	let number = parseFloat(num).toFixed(2);
-	return number;
+	subTotalOutput.innerText = subTotal.toFixed(2);
+	// calculate the taxes for the subtotal
+	let taxes = subTotal * 0.13;
+	let total = subTotal + taxes;
+	// display the running Total with taxes
+	hstOutput.innerText = taxes.toFixed(2);
+	totalOutput.innerText = total.toFixed(2);
 }
 
 function updateDisplay() {}
