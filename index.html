@@ -6,10 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Point-of-Sales</title>
 		<link rel="stylesheet" href="css/styles.css" />
-		<script src="js/main.js"></script>
+		<script src="js/main.js" defer></script>
 	</head>
 	<body>
-		<form action="#">
+		<form>
 			<fieldset class="admin-container top">
 				<legend>Admin</legend>
 				<div class="admin left">
@@ -25,11 +25,15 @@
 			<div class="left-side">
 				<div class="displayPanel">
 					<div class="displayLabel">
-						<label>Services</label>
-						<label>Employee Id</label>
-						<label>Price</label>
+						<p #id="serviceLabel">Services</p>
+						<p>EmployeeId</p>
+						<p>Price</p>
 					</div>
-					<div class="displayOutput"></div>
+					<div class="displayOutput">
+						<div class="service-column"></div>
+						<div class="employeeid-column"></div>
+						<div class="price-column"></div>
+					</div>
 				</div>
 				<div class="totalPriceDisplay">
 					<div class="subtotal-labels">
@@ -38,9 +42,9 @@
 						<label>Total: </label>
 					</div>
 					<div class="subtotal-values">
-						<span>0.00</span>
-						<span>0.00</span>
-						<span>0.00</span>
+						<span id="subtotal">0.00</span>
+						<span id="hst">0.00</span>
+						<span id="total">0.00</span>
 					</div>
 				</div>
 				<div class="belowTotal">
@@ -60,35 +64,39 @@
 			<div class="right-side">
 				<fieldset class="serviceCategory-container">
 					<legend>Service Categories</legend>
-					<button class="btn" type="button">Nails</button>
-					<button class="btn" type="button">Mani-Pedi</button>
-					<button class="btn" type="button">Waxing</button>
-					<button class="btn" type="button">Sales</button>
+					<button class="btn serviceCategory" type="button">Nails</button>
+					<button class="btn serviceCategory" type="button">Mani-Pedi</button>
+					<button class="btn serviceCategory" type="button">Waxing</button>
+					<button class="btn serviceCategory" type="button">Sales</button>
 				</fieldset>
 				<fieldset class="service-container">
 					<legend>Services</legend>
-					<button class="btn" type="button">item-1</button>
-					<button class="btn" type="button">item-2</button>
-					<button class="btn" type="button">item-3</button>
-					<button class="btn" type="button">item-4</button>
-					<button class="btn" type="button">item-5</button>
-					<button class="btn" type="button">item-6</button>
-					<button class="btn" type="button">item-7</button>
-					<button class="btn" type="button">item-8</button>
-					<button class="btn" type="button">item-9</button>
-					<button class="btn" type="button">item-10</button>
-					<button class="btn" type="button">item-11</button>
-					<button class="btn" type="button">item-12</button>
-					<button class="btn" type="button">item-13</button>
-					<button class="btn" type="button">item-14</button>
-					<button class="btn" type="button">item-15</button>
-					<button class="btn" type="button">item-16</button>
-					<button class="btn" type="button">item-17</button>
-					<button class="btn" type="button">item-18</button>
-					<button class="btn" type="button">item-19</button>
-					<button class="btn" type="button">item-20</button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
+					<button class="btn serviceBtn" type="button"></button>
 				</fieldset>
 			</div>
 		</form>
+		<!-- <script>
+			const buttons = document.querySelectorAll(".serviceBtn");
+			console.log(buttons);
+		</script> -->
 	</body>
 </html>
