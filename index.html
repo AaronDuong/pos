@@ -15,7 +15,9 @@
 				<div class="admin left">
 					<button class="btn" type="button">Sign Out</button>
 					<button class="btn" type="button">Settings</button>
-					<button class="btn" type="button">Print Last Invoice</button>
+					<button class="btn" id="select-employee" type="button">
+						Select EmployeeID
+					</button>
 				</div>
 				<div class="admin right">
 					<button class="btn" type="button">Refresh</button>
@@ -94,5 +96,15 @@
 				</fieldset>
 			</div>
 		</form>
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h3>Select EmployeeID</h3>
+				<div class="employee-list"></div>
+			</div>
+		</div>
 	</body>
 </html>
